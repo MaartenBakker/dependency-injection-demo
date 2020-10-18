@@ -11,16 +11,7 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")
-})
-
 public class FakeDataSourcesConfig {
-
-    @Autowired
-    Environment env;
-
     @Value("${maartenmusic.username}")
     String user;
     @Value("${maartenmusic.password}")
@@ -40,7 +31,7 @@ public class FakeDataSourcesConfig {
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setUser(env.getProperty("USERNAME")); // Env variables override properties file variables
+        fakeDataSource.setUser(user);
         fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(url);
 
