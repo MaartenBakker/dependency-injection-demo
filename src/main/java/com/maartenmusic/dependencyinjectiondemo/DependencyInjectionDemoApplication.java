@@ -2,6 +2,7 @@ package com.maartenmusic.dependencyinjectiondemo;
 
 import com.maartenmusic.dependencyinjectiondemo.controllers.*;
 import com.maartenmusic.dependencyinjectiondemo.examplebeans.FakeDataSource;
+import com.maartenmusic.dependencyinjectiondemo.examplebeans.FakeJmsBroker;
 import com.maartenmusic.dependencyinjectiondemo.services.GreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,6 +23,12 @@ public class DependencyInjectionDemoApplication {
 		System.out.println(fakeDataSource.getUser());
 		System.out.println(fakeDataSource.getPassword());
 		System.out.println(fakeDataSource.getUrl());
+
+		FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
+
+		System.out.println(fakeJmsBroker.getUser());
+		System.out.println(fakeJmsBroker.getPassword());
+		System.out.println(fakeJmsBroker.getUrl());
 
 	}
 
