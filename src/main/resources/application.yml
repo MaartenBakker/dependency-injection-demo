@@ -1,0 +1,5 @@
+maartenmusic:
+  jms:
+    username: JMS Username
+    password: hunter3
+    dburl: jmsdburl
