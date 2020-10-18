@@ -1,0 +1,40 @@
+# this is a comment
+
+name: Bakker
+
+names: # spacing is very strict!
+  - Maarten
+  - Anna
+  - Ella
+  - Kasper
+  - Berend
+
+pound_sign: "#"
+
+book:
+  author: Maarten Bakker
+  publisher: Maarten Music
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+string_val: "This is it's quote"
+
+colon_string: "my courses: one two three" #quotes to escape : character in string
+
+include_new_lines: |
+  test test test
+  test test test
+  test test test
+
+ignore_new_lines: >
+  this is just
+  one long
+  string
+
+
