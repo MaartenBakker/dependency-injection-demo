@@ -3,3 +3,13 @@ maartenmusic:
     username: JMS Username
     password: hunter3
     dburl: jmsdburl
+
+---
+spring:
+  profiles: es
+
+maartenmusic:
+  jms:
+    username: JMS Usernombre
+    password: del hunter3
+    dburl: la cucharacha
